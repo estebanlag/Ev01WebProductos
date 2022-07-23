@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function index(){
-       return view('dashboard'); 
+       return view('login'); 
+    }
+
+    public function loged(){
+        return view('loged');
     }
 }

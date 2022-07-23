@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/login','App\Http\Controllers\LoginController@index');
+Route::get('/usuarioIngresado','App\Http\Controllers\LoginController@loged')->name('ingresado');
 
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 
