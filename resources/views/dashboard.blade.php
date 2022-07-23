@@ -3,13 +3,21 @@
 
 
 
-@section('header')
- <h2>Producto</h2>
-@stop
-
 @section('content')
 
 <div class="container-fluid">
+  <br>
+<div class="row">
+  <div class="col-8">
+    <h2>Productos</h2>
+  </div>
+  <div class="col-4">
+   <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="SKU, Nombre, o Sucursal" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+  </div>
+</div>
 <div class="row">
 
 

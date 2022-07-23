@@ -3,9 +3,6 @@
 
 
 
-@section('header')
- <h2>Producto</h2>
-@stop
 
 @section('content')
 

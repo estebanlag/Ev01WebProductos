@@ -3,13 +3,11 @@
 
 
 
-@section('header')
- <h2>Producto</h2>
-@stop
 
 @section('content')
 
 <div class="container-fluid">
+  <br>
 <div class="row">
 <center><b>Eliminado {{$nombre}} cantidad {{$cantidad}}</b> </center>
 
