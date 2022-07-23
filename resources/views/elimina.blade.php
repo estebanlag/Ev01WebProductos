@@ -11,23 +11,10 @@
 
 <div class="container-fluid">
 <div class="row">
+<center><b>Eliminado {{$nombre}} cantidad {{$cantidad}}</b> </center>
 
-
-
-
-@for ($i = 2; $i < 8; $i++)
-@component('components.productos')
-@slot('nombre')
-producto{{$i}}
-@endslot
-@slot('cantidad')
-{{$i}}
-@endslot
-@slot('id')
-producto{{$i}}
-@endslot
-@endcomponent
-@endfor
+<a href='../../dashboard' class='btn btn-danger'>volver</a>
+Sebastian martinez
 
 </div>
 </div>

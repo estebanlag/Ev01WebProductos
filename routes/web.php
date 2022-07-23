@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+  //  return view('welcome');
+//});
+
 
 Route::get('/login','App\Http\Controllers\LoginController@index');
 Route::get('/usuarioIngresado','App\Http\Controllers\LoginController@loged')->name('ingresado');
-
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
-
 Route::get('/crear','App\Http\Controllers\CrearProductoController@index');
-
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
+Route::get('/actualiza/{nombre}/{cantidad}','App\Http\Controllers\ActualizarProductos@actualiza');
+Route::get('/elimina/{nombre}/{cantidad}','App\Http\Controllers\EliminarProductos@elimina');
