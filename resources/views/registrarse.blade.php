@@ -33,7 +33,7 @@
               <input type="password" class="form-control" id="contraseña" name="contraseña" required="required">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Confirmar ontraseña</label>
+                <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
                 <input type="password" class="form-control" id="Rcontraseña" name="Rcontraseña" required="required">
               </div>
             <button type="submit" class="btn btn-primary">Registrarse</button>
