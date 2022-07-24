@@ -34,6 +34,7 @@
       <th scope="col">cod</th>
       <th scope="col">categoria</th>
       <th scope="col">precio</th>
+      <th scope="col">descripción</th>
       <th scope="col">acción</th>
     </tr>
     </tr>

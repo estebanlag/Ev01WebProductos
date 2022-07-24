@@ -13,6 +13,7 @@
       <td>{{$id}}</td>
       <td>{{$categoria}}</td>
       <td>{{$precio}}</td>
+      <td>descripción</td>
       
     
       <td>  <a href="../actualiza/{{$nombre}}/{{$cantidad}}/{{$sucursal}}" <button class="btn btn-primary" id="{{$id}}">Actualizar</button></a>
