@@ -21,7 +21,8 @@ cantidad:
 
 </div>
 </div>
-Sebastian martinez
+
+
 <script>
 function actualiza(){
     document.getElementById("actualiza").innerHTML = "<h1>Producto actualizado!</h1> <a href='../../../dashboard' class='btn btn-danger'>volver</a>";

@@ -12,8 +12,6 @@
 <center><b>Eliminado {{$nombre}} cantidad {{$cantidad}}</b> </center>
 
 <a href='../../dashboard' class='btn btn-danger'>volver</a>
-Sebastian martinez
-
 </div>
 </div>
 
