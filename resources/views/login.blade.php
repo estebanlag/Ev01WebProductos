@@ -14,8 +14,8 @@
     
     <div class="card" style="width: 40rem;">
         <div class="card-body">
-          <h4 class="card-title">Ingresa</h4>
-          <form method="" action="{{ route('ingresado') }}">
+          <h4 class="card-title">Ingresar</h4>
+          <form method="" action="{{ url('dashboard') }}">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="email" required="required">
@@ -26,7 +26,8 @@
             </div>
             <button type="submit" class="btn btn-primary">Ingresar</button>
           </form>
-          <a href="#" class="card-link">¿Olvidaste tu contraseña?</a>
+          <a href="{{ url('recuperarContraseña') }}" class="card-link">¿Olvidaste tu contraseña?</a>
+          <a href="{{ route('registrarse') }}" class="card-link">Registrase</a>
         </div>
       </div>
     </div>
@@ -36,5 +37,11 @@
 @stop
 @section('footer')
 @parent
-   <h5>Creado por Braulio Díaz</h5>
+   {{-- Braulio --}}
 @stop
+
+
+
+
+
+

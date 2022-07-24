@@ -8,7 +8,7 @@
       <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
       <div>
         <div class="alert alert-success" role="alert">
-        <h2><center>¡Usuario creado con éxito!</center></h2>
+        <h2><center>¡Se a enviado una nueva contraseña a su email!</center></h2>
     </div>
       </div>
     </div>
@@ -25,4 +25,3 @@
 @parent
       {{-- Braulio --}}
 @stop
-      
