@@ -8,6 +8,9 @@
 <div class="container-fluid">
   <br>
 <div class="row">
+  <a href="{{route('CrearProducto')}}" class="mt-4 mb-4">
+     <button type="button" class="btn btn-primary">Crear Producto</button>
+  </a>
   <div class="col-8">
     <h2>Productos</h2>
   </div>
