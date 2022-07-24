@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Verduras')
+@section('title','Crear Producto')
 
 @section('header')
 

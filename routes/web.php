@@ -25,5 +25,8 @@ Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
 Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');
 Route::get('/elimina/{nombre}/{cantidad}','App\Http\Controllers\EliminarProductos@elimina');
+
 Route::get('/crearproducto','App\Http\Controllers\ProductoController@index')->name("CrearProducto");
 Route::post('/productoGuardar','App\Http\Controllers\ProductoController@guardar');
+Route::get('/productoSucursal','App\Http\Controllers\ProductoController@ProductoSucursal')->name("ProductoSucursal");
+Route::post('/guardarproductoSucursal','App\Http\Controllers\ProductoController@GuardarProductoSucursal');
