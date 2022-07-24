@@ -27,7 +27,7 @@
             <button type="submit" class="btn btn-primary">Ingresar</button>
           </form>
           <a href="{{ url('recuperarContraseña') }}" class="card-link">¿Olvidaste tu contraseña?</a>
-          <a href="{{ route('registrarse') }}" class="card-link">Registrase</a>
+          <a href="{{ route('registrarse') }}" class="card-link">Registrarse</a>
         </div>
       </div>
     </div>
