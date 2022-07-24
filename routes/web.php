@@ -23,6 +23,7 @@ Route::get('/usuarioRegistrado','App\Http\Controllers\LoginController@loged')->n
 Route::get('/registrarUsuario','App\Http\Controllers\LoginController@register')->name('registrarse');
 Route::get('/recuperarContraseña','App\Http\Controllers\LoginController@recuperarContraseña');
 Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contraseñaRecuperada');
+Route::post('/logout','App\Http\Controllers\LoginController@logout');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
 Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');

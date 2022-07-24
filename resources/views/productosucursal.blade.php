@@ -3,7 +3,7 @@
 
 @section('header')
 
-<h2  class="text-center mt-4 mb-4">Producto Sucursal</h2>
+<h2  class="text-center mt-4 mb-4">Asignar Productos a Sucursal</h2>
 @stop
 
 @section('content')

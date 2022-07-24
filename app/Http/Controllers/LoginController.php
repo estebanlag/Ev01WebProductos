@@ -26,4 +26,8 @@ class LoginController extends Controller
     public function contraseñaRecuperada(){
         return view('contraseñaRecuperada');
     }
+
+    public function logout(){
+       return view('login');
+     }
 }
