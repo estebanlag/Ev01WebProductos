@@ -1,6 +1,21 @@
-<div class='col-md-3'>
-                <h5>{{$nombre}}</h5> Cantidad: {{$cantidad}}
-                <hr>
-                <a href="../actualiza/{{$nombre}}/{{$cantidad}}" <button class="btn btn-primary" id="{{$id}}">Actualizar</button></a>
+
+
+
+
+
+ <tr>
+      <th scope="row">{{$idx}}</th>
+      
+      <td>{{$nombre}}</td>
+      <td>{{$cantidad}}</td>
+      
+      <td>{{$sucursal}}</td>
+      <td>{{$id}}</td>
+      <td>{{$categoria}}</td>
+      <td>{{$precio}}</td>
+      
+    
+      <td>  <a href="../actualiza/{{$nombre}}/{{$cantidad}}/{{$sucursal}}" <button class="btn btn-primary" id="{{$id}}">Actualizar</button></a>
                 <a href="../elimina/{{$nombre}}/{{$cantidad}}" <button class="btn btn-danger" id="{{$id}}">Eliminar</button></a>
-                </div>
+            </td>
+    </tr>

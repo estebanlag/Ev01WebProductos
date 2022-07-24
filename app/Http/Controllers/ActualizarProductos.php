@@ -8,9 +8,10 @@ class ActualizarProductos extends Controller
 {
     //sebastian martinez
 
-    public function actualiza($nombre,$cantidad){
+    public function actualiza($nombre,$cantidad,$sucursal){
         return view('actualiza')->
         with('nombre', $nombre)->
+        with('sucursal', $sucursal)->
         with('cantidad', $cantidad);
     }
 }

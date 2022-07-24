@@ -22,7 +22,7 @@ Route::get('/login','App\Http\Controllers\LoginController@index');
 Route::get('/usuarioIngresado','App\Http\Controllers\LoginController@loged')->name('ingresado');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
-Route::get('/actualiza/{nombre}/{cantidad}','App\Http\Controllers\ActualizarProductos@actualiza');
+Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');
 Route::get('/elimina/{nombre}/{cantidad}','App\Http\Controllers\EliminarProductos@elimina');
 Route::get('/crearproducto','App\Http\Controllers\ProductoController@index')->name("CrearProducto");
 Route::post('/productoGuardar','App\Http\Controllers\ProductoController@guardar');

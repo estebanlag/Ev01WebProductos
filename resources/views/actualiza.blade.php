@@ -14,6 +14,7 @@ nombre:
 <input type="text" class="form-control"  value="{{$nombre}}" placeholder="producto">
 cantidad:
 <input type="text" class="form-control" value="{{$cantidad}}" placeholder="cantidad">
+<input type="text" class="form-control" value="{{$sucursal}}" placeholder="cantidad">
 
 <button class="btn btn-success btn-lg" id="" onclick="actualiza();"> enviar</button>
 </div>
@@ -23,7 +24,7 @@ cantidad:
 Sebastian martinez
 <script>
 function actualiza(){
-    document.getElementById("actualiza").innerHTML = "<h1>Producto actualizado!</h1> <a href='../../dashboard' class='btn btn-danger'>volver</a>";
+    document.getElementById("actualiza").innerHTML = "<h1>Producto actualizado!</h1> <a href='../../../dashboard' class='btn btn-danger'>volver</a>";
 
 }
 

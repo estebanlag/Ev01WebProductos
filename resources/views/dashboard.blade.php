@@ -24,24 +24,64 @@
 <div class="row">
 
 
-
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+      <th scope="col">cantidad</th>
+      <th scope="col">sucursal</th>
+      <th scope="col">cod</th>
+      <th scope="col">categoria</th>
+      <th scope="col">precio</th>
+      <th scope="col">acción</th>
+    </tr>
+    </tr>
+  </thead>
+  <tbody>
+<?php $ix=1; ?>
 @for ($i = 2; $i < 8; $i++)
+
+
+
+
 @component('components.productos')
 @slot('nombre')
 producto{{$i}}
 @endslot
+
 @slot('cantidad')
-{{$i}}
+{{$i*5}}
 @endslot
+
 @slot('id')
-producto{{$i}}
+HAS{{$i}}
 @endslot
+
+@slot('sucursal')
+sucursal{{$ix}}
+@endslot
+
+
+
+@slot('categoria')
+categoria{{$ix}}
+@endslot
+
+@slot('idx')
+{{$ix++;}}
+@endslot
+@slot('precio')
+${{$ix*6577;}}
+@endslot
+
 @endcomponent
 @endfor
+</tbody>
+</table>
+</div>
+</div>
 
-</div>
-</div>
 
 @stop
 
