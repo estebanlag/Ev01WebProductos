@@ -15,7 +15,6 @@ class LoginController extends Controller
         return view('loged');
     }
 
-<<<<<<< HEAD
     public function register(){
         return view('registrarse');
     }
@@ -26,12 +25,5 @@ class LoginController extends Controller
 
     public function contraseñaRecuperada(){
         return view('contraseñaRecuperada');
-=======
-
-    public function logout(){
-       
-        return view('login');
-
->>>>>>> 9ed3586157a48c00b9a2fd15f61c3a3ee6300234
     }
 }
