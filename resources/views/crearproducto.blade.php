@@ -48,6 +48,7 @@
     <input type="text" class="form-control" id="precio" name="precio">
   </div>
   <button type="submit" class="btn btn-primary">Guardar</button>
+  <button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
 </form>
 </div>
 

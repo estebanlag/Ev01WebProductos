@@ -18,11 +18,17 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
+<<<<<<< HEAD
 Route::get('/login','App\Http\Controllers\LoginController@index')->name('ingresar');
 Route::get('/usuarioRegistrado','App\Http\Controllers\LoginController@loged')->name('registrado');
 Route::get('/registrarUsuario','App\Http\Controllers\LoginController@register')->name('registrarse');
 Route::get('/recuperarContraseña','App\Http\Controllers\LoginController@recuperarContraseña');
 Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contraseñaRecuperada');
+=======
+Route::get('/login','App\Http\Controllers\LoginController@index');
+Route::get('/usuarioIngresado','App\Http\Controllers\LoginController@loged')->name('ingresado');
+Route::post('/logout','App\Http\Controllers\LoginController@logout');
+>>>>>>> 9ed3586157a48c00b9a2fd15f61c3a3ee6300234
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
 Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');
