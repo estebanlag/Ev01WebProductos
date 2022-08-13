@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use PHPUnit\Framework\Constraint\Constraint;
 
-class CreateProductoSucurusalTable extends Migration
+class CreateProductoSucursalTable extends Migration
 {
     /**
      * Run the migrations.
