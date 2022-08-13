@@ -17,7 +17,7 @@ class InsertarDatosCategoria extends Seeder
         DB::table('Categoria')->insert(array(
             [
                 'nombre' => 'Juguetes',
-                'estado' => '0'
+                'estado' => '1'
             ],
             [
                 'nombre' => 'Electronico',
