@@ -19,19 +19,19 @@ class InsertarDatosUsuario extends Seeder
               'nombre_completo' => 'Karen Perez',
               'email' => 'kperez@email.com',
               'password' => '123456',
-              'estado' => 'true'
+              'estado' => true
              ],
              [  
                 'nombre_completo' => 'Daniel Soto',
                 'email' => 'dsoto@email.com',
                 'password' => '123456',
-                'estado' => 'true'
+                'estado' => true
               ],
               [  
                 'nombre_completo' => 'Javiera Gonzalez',
                 'email' => 'jgonzalez@email.com',
                 'password' => '123456',
-                'estado' => 'true'
+                'estado' => true
               ]
           ));
     }
