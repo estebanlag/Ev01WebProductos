@@ -14,6 +14,28 @@ class InsertarDatosSucursal extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('Sucursal')->insert(array(
+            [
+                'nombre' => 'Santiago',
+                'direccion' => 'Las Condes 123',
+                'telefono' => '912341234',
+                'email' => 'lascondes@santiago.cl',
+                'estado' => '0'
+            ],
+            [
+                'nombre' => 'Viña del Mar',
+                'direccion' => 'Con Con 123',
+                'telefono' => '912341234',
+                'email' => 'concon@vinadelmar.cl',
+                'estado' => '0'
+            ],
+            [
+                'nombre' => 'Antofagasta',
+                'direccion' => 'Antofagasta 123',
+                'telefono' => '912341234',
+                'email' => 'antofagasta@antofagasta.cl',
+                'estado' => '0'
+            ],
+        ));
     }
 }

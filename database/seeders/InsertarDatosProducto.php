@@ -14,6 +14,7 @@ class InsertarDatosProducto extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         DB::table('Producto')->insert(array(
 
             [
@@ -38,5 +39,8 @@ class InsertarDatosProducto extends Seeder
                 'image'=>'	https://www.hp.com/lamerica_nsc_cnt_amer/es/images…_tcm237_2343093_tcm237_2087694_tcm237-2343093.jpg'
             ]
         ));
+=======
+        ///
+>>>>>>> 9467d3f65b8382980b3fa75a0d149677b9fb6e87
     }
 }
