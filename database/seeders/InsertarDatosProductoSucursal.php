@@ -22,7 +22,7 @@ class InsertarDatosProductoSucursal extends Seeder
                 'sucursal_id'=>'1',
                 'Cantidad'=>'12',
                 'Precio'=>'1500',
-                'estado'=>'activo'
+                'estado'=> true
                 
             ],
             [
@@ -30,8 +30,8 @@ class InsertarDatosProductoSucursal extends Seeder
                 'producto_id'=>'2',
                 'sucursal_id'=>'2',
                 'Cantidad'=>'1',
-                'Precio'=>'2500',
-                'estado'=>'activo'
+                'Precio'=> '2500',
+                'estado'=> true
                 
             ],
             [
@@ -39,8 +39,8 @@ class InsertarDatosProductoSucursal extends Seeder
                 'producto_id'=>'3',
                 'sucursal_id'=>'3',
                 'Cantidad'=>'2',
-                'Precio'=>'1200',
-                'estado'=>'no activo'
+                'Precio'=> '1200',
+                'estado'=> false
                 
             ],
 
