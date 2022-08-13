@@ -15,7 +15,7 @@ class CreateProductoSucurusalTable extends Migration
     public function up()
     {
         Schema::create('ProductoSucursal', function (Blueprint $table) {
-            $table->id_Producto_Sucursal();
+            $table->id();
             $table->text('cod_Producto_Sucursal');
             $table->foreignId('Producto_id')->constrained;
             $table->foreignId('Sucursal_id')->constrained;
