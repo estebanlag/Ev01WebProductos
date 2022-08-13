@@ -14,9 +14,9 @@ class InsertarDatosCategoria extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
+
         
-=======
+
         DB::table('Categoria')->insert(array(
             [
                 'nombre' => 'Juguetes',
@@ -31,6 +31,6 @@ class InsertarDatosCategoria extends Seeder
                 'estado' => '0'
             ],
         ));
->>>>>>> 9467d3f65b8382980b3fa75a0d149677b9fb6e87
+
     }
 }
