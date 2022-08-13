@@ -14,6 +14,6 @@ class InsertarDatosCategoria extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }
