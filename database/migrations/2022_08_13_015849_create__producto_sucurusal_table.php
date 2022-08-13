@@ -19,8 +19,8 @@ class CreateProductoSucurusalTable extends Migration
             $table->text('cod_Producto_Sucursal');
             $table->foreignId('Producto_id')->constrained;
             $table->foreignId('Sucursal_id')->constrained;
-            $table->int('Cantidad');
-            $table->int('Precio');
+            $table->integer('Cantidad');
+            $table->integer('Precio');
             $table->string('Estado');
             
         });
