@@ -19,7 +19,7 @@ class CreateSucursalTable extends Migration
             $table->string('direccion', 50);
             $table->string('telefono', 15);
             $table->string('email', 50);
-            $table->integer('estado');
+            $table->boolean('estado')->default(true);
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class CreateProductoTable extends Migration
             $table->string('codigo', 100);
             $table->string('nombre', 60);
             $table->string('descripcion', 60);
-            $table->integer('estado');
+            $table->boolean('estado')->default(true);
             $table->text('image');
             $table->timestamps();
         });

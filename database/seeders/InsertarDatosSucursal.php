@@ -20,21 +20,21 @@ class InsertarDatosSucursal extends Seeder
                 'direccion' => 'Las Condes 123',
                 'telefono' => '912341234',
                 'email' => 'lascondes@santiago.cl',
-                'estado' => '0'
+                'estado' => true
             ],
             [
                 'nombre' => 'Viña del Mar',
                 'direccion' => 'Con Con 123',
                 'telefono' => '912341234',
                 'email' => 'concon@vinadelmar.cl',
-                'estado' => '0'
+                'estado' => true
             ],
             [
                 'nombre' => 'Antofagasta',
                 'direccion' => 'Antofagasta 123',
                 'telefono' => '912341234',
                 'email' => 'antofagasta@antofagasta.cl',
-                'estado' => '0'
+                'estado' => true
             ],
         ));
     }
