@@ -14,6 +14,6 @@ class InsertarDatosProducto extends Seeder
      */
     public function run()
     {
-        //
+        ///
     }
 }
