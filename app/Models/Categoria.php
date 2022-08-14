@@ -11,8 +11,8 @@ class Categoria extends Model
     protected $primarykey ='id';
     protected $table = 'Categoria';
 
-public function productoCategorias(){
+public function Categoria(){
 
-    return $this->hasMany(ProductoCategoria::class);
+    return $this->hasMany(Categoria::class);
 }
 }

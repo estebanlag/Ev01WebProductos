@@ -11,9 +11,10 @@ class Sucursalx extends Controller
 
     public function index(){
 $sucursales = Sucursal::get();
-dd($sucursales);
+//dd($sucursales);
 
-print_r($sucursales);
+//print_r($sucursales);
+return view('crearsucursal'); 
 
     }
 }

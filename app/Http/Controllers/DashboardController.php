@@ -15,9 +15,8 @@ class DashboardController extends Controller
     public function mostrarproductos(){
 
       $productos = Producto::get();
- 
       return view('mostrarproductos', [
         'productos' => $productos
-   ]);
+  ]);
 }
 }

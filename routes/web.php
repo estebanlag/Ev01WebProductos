@@ -27,15 +27,16 @@ Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contra
 Route::post('/logout','App\Http\Controllers\LoginController@logout');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/mostrarproducto', 'App\Http\Controllers\DashboardController@mostrarproductos');
-Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
-Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');
-Route::get('/elimina/{nombre}/{cantidad}','App\Http\Controllers\EliminarProductos@elimina');
 
-Route::get('/crearproducto','App\Http\Controllers\ProductoController@index')->name("CrearProducto");
-Route::post('/productoGuardar','App\Http\Controllers\ProductoController@guardar');
-Route::get('/productoSucursal','App\Http\Controllers\ProductoController@ProductoSucursal')->name("ProductoSucursal");
-Route::post('/guardarproductoSucursal','App\Http\Controllers\ProductoController@GuardarProductoSucursal');
 
+
+
+
+
+Route::resource('/prodcategoria','App\Http\Controllers\prodcategoria');
+Route::resource('/usuario','App\Http\Controllers\usuarios');
+Route::resource('/categoria','App\Http\Controllers\categorias');
+Route::resource('/producto','App\Http\Controllers\productos');
 Route::resource('/sucursalx','App\Http\Controllers\sucursalx');
 Route::resource('/prodsucursal','App\Http\Controllers\productosucursalx');
 //---------------------------------------------------------------

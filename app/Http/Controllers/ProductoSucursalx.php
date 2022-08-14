@@ -20,21 +20,23 @@ class ProductoSucursalx extends Controller
         $sucursal = DB::table('sucursal')->get();
         $productos = DB::table('producto')->get();
       
-        echo "ingresa cantidad <br><input type='number' class='form-control' placeholder='ingresa cantidad'><br>";
-        echo "ingresa valor <br><input type='number' class='form-control' placeholder='ingresa valor'><br>";
-        echo "<select name='sucursal'>";
-        foreach ($sucursal as $valor) {
-               echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
-           }
-          echo "</select><br>";
-      
-          echo "<select name='productos'>";
-        foreach ($productos as $valor) {
-               echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
-           }
-          echo "</select><br>";
-      
-      
+        // ESTO DEBE VENIR EN LA VISTA
+        //echo "ingresa cantidad <br><input type='number' class='form-control' placeholder='ingresa cantidad'><br>";
+       // echo "ingresa valor <br><input type='number' class='form-control' placeholder='ingresa valor'><br>";
+        //echo "<select name='sucursal'>";
+        //foreach ($sucursal as $valor) {
+        //       echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
+         //  }
+        //  echo "</select><br>";
+      //
+        //  echo "<select name='productos'>";
+        //foreach ($productos as $valor) {
+         //      echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
+          // }
+          //echo "</select><br>";
+          
+        
+        
       
     }
 }
