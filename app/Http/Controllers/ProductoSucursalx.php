@@ -39,6 +39,10 @@ class ProductoSucursalx extends Controller
         
       
     }
+
+    public function create(){
+      return view('productosucursal');
+    }
 }
 
 

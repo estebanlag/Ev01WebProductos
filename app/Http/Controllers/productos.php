@@ -12,7 +12,10 @@ class productos extends Controller
         $productos = Producto::get();
         //dd($sucursales);
         
+
         return view('mostrarproductos',['productos' => $productos]);
+
+        return view('crearsucursal'); 
         
             }
 

@@ -12,11 +12,18 @@ class DashboardController extends Controller
       return view('dashboard');
     }
 
-    public function mostrarproductos(){
+    public function mostrarproductos(Request $request){
 
-      $productos = Producto::get();
+      $buscarproducto = $request->buscarproducto;
+
+      $productos = Producto::where('nombre', 'LIKE', '%'.$buscarproducto.'%')
+      ->orWhere('codigo', 'LIKE', '%'.$buscarproducto.'%')
+      ->get();
+
       return view('mostrarproductos', [
         'productos' => $productos
   ]);
+
+  
 }
 }

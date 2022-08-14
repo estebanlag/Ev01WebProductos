@@ -10,11 +10,29 @@ class categorias extends Controller
     //
 
     public function index(){
-        $cat = Categoria::get();
-        //dd($sucursales);
-        
-        print_r($cat);
-        return view('crearsucursal'); 
-        
+        $categorias = Categoria::get();
+        return view('crearcategoria',['categorias' => $categorias]);
+
+    }
+
+            public function create(){
+                
+                
             }
+            
+            public function store(Request $request){
+                $this ->validate($request, [
+                    'nombre'=> 'required'
+                ]);
+
+        
+                $categoriaNueva = new Categoria();
+                $categoriaNueva->nombre = $request->nombre;
+        
+                $categoriaNueva->save();
+
+                return view('dashboard');
+            }
+        
+
 }

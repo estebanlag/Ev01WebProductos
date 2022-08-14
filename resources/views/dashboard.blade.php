@@ -11,7 +11,10 @@
             <a class="nav-link" href="">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="#">Producto Sucursal</a>
+            <a class="nav-link text-primary" href="prodsucursal/create">Producto Sucursal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="/mostrarproducto">Ver tabla producto</a>
           </li>
         </ul>
       </div>
@@ -31,17 +34,17 @@
   <br>
 <div class="row">
   <div class="col-2">
-  <a href="#" class="mt-4 mb-4">
+  <a href="{{url('producto')}}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Producto</button>
   </a>
   </div>
   <div class="col-2">
-  <a href="#" class="mt-4 mb-4">
+  <a href="{{ url('categoria') }}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Categoría</button>
   </a>
 </div>
 <div class="col-2">
-<a href="#" class="mt-4 mb-4">
+<a href="{{url('sucursal')}}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Sucursal</button>
   </a>
 </div>
