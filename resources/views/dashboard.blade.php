@@ -11,7 +11,7 @@
             <a class="nav-link" href="">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary"" href="{{route('ProductoSucursal')}}">Producto Sucursal</a>
+            <a class="nav-link text-primary" href="{{route('ProductoSucursal')}}">Producto Sucursal</a>
           </li>
         </ul>
       </div>
@@ -30,9 +30,22 @@
 <div class="container-fluid">
   <br>
 <div class="row">
+  <div class="col-2">
   <a href="{{route('CrearProducto')}}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Producto</button>
   </a>
+  </div>
+  <div class="col-2">
+  <a href="{{route('CrearCategoria')}}" class="mt-4 mb-4">
+     <button type="button" class="btn btn-primary">Crear Categoría</button>
+  </a>
+</div>
+<div class="col-2">
+<a href="{{route('CrearSucursal')}}" class="mt-4 mb-4">
+     <button type="button" class="btn btn-primary">Crear Sucursal</button>
+  </a>
+</div>
+  
   <div class="col-8">
     <h2>Productos</h2>
   </div>

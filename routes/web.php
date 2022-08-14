@@ -33,3 +33,6 @@ Route::get('/crearproducto','App\Http\Controllers\ProductoController@index')->na
 Route::post('/productoGuardar','App\Http\Controllers\ProductoController@guardar');
 Route::get('/productoSucursal','App\Http\Controllers\ProductoController@ProductoSucursal')->name("ProductoSucursal");
 Route::post('/guardarproductoSucursal','App\Http\Controllers\ProductoController@GuardarProductoSucursal');
+
+Route::get('/crearsucursal','App\Http\Controllers\SucursalController@index')->name("CrearSucursal");
+Route::get('/crearcategoria','App\Http\Controllers\CategoriaController@index')->name("CrearCategoria");
