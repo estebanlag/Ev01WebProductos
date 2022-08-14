@@ -12,10 +12,10 @@ class ProductoCategoria extends Model
     protected $table = 'ProductoCategoria';
 
     public function categorias(){
-        return $this->belongsTo(Categorias::class, 'id_categoria');
+        return $this->belongsTo(Categoria::class, 'id_categoria');
     }
 
     public function productos(){
-        return $this->belongsTo(Productos::class, 'id_producto');
+        return $this->belongsTo(Producto::class, 'id_producto');
     }
 }
