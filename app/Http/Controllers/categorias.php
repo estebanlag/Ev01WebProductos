@@ -11,9 +11,9 @@ class categorias extends Controller
 
     public function index(){
         $categorias = Categoria::get();
-        return view('crearcategoria');
+        return view('crearcategoria',['categorias' => $categorias]);
 
-            }
+    }
 
             public function create(){
                 
