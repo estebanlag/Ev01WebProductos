@@ -25,6 +25,7 @@ Route::get('/recuperarContraseña','App\Http\Controllers\LoginController@recuper
 Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contraseñaRecuperada');
 Route::post('/logout','App\Http\Controllers\LoginController@logout');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
+Route::get('/mostrarproducto', 'App\Http\Controllers\DashboardController@mostrarproductos');
 Route::get('/editar','App\Http\Controllers\EditarProductoController@index');
 Route::get('/actualiza/{nombre}/{cantidad}/{sucursal}','App\Http\Controllers\ActualizarProductos@actualiza');
 Route::get('/elimina/{nombre}/{cantidad}','App\Http\Controllers\EliminarProductos@elimina');
