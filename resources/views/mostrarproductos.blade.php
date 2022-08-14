@@ -23,6 +23,7 @@
               <td>{{ $producto->codigo}}</td>
               <td >{{ $producto->nombre }}</td>
               <td>{{ $producto->descripcion }}</td>
+              <td>{{ $producto->estado }}</td>
               <td><img src="{{ $producto->image }}" width="50" height="50" class="img-thumbnail"></td>
               <td><button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button></td>
               <td><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></td>
