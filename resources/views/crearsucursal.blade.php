@@ -29,6 +29,34 @@
   <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
 </form>
 </div>
+<div class="container mt-4 mb-5">
+  <h2 class="text-center m-4">Sucursales</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+    @foreach ($sucursales as $sucursal)
+      <tr>
+      <td>{{ $sucursal->nombre }}</td>
+      <td>{{ $sucursal->direccion }}</td>
+      <td>{{ $sucursal->telefono }}</td>
+      <td>{{ $sucursal->email }}</td>
+      <td>  
+        <a href="#" <button class="btn btn-primary">Actualizar</button></a>
+        <a href="#" <button class="btn btn-danger">Eliminar</button></a>
+       </td>
+      </tr>
+      @endforeach
+    </tbody>
+  </table>
+</div>
 
 
 @stop

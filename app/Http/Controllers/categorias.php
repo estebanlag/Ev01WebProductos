@@ -12,6 +12,7 @@ class categorias extends Controller
     public function index(){
        
         $categorias = Categoria::get();
+<<<<<<< HEAD
         
         return view('crearcategoria', [
             'categorias' => $categorias
@@ -30,6 +31,11 @@ public function mostrarcategoria(Request $request){
         'categorias' => $categorias
     ]);
 }
+=======
+        return view('crearcategoria',['categorias' => $categorias]);
+
+    }
+>>>>>>> 6e9c5545ccc4b9795cc52bd7a2a0ae1aec87644d
 
             public function create(){
                 

@@ -27,7 +27,11 @@ Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contra
 Route::post('/logout','App\Http\Controllers\LoginController@logout');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/mostrarproducto', 'App\Http\Controllers\DashboardController@mostrarproductos');
+<<<<<<< HEAD
 Route::get('/mostrarcategoria', 'App\Http\Controllers\categorias@mostrarcategoria');
+=======
+Route::get('/crearproducto', 'App\Http\Controllers\productos@formulario');
+>>>>>>> 6e9c5545ccc4b9795cc52bd7a2a0ae1aec87644d
 
 
 

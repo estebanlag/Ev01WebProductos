@@ -37,7 +37,7 @@
   <br>
 <div class="row">
   <div class="col-2">
-  <a href="{{url('producto')}}" class="mt-4 mb-4">
+  <a href="{{url('crearproducto')}}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Producto</button>
   </a>
   </div>

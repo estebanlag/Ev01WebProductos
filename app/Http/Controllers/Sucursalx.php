@@ -1,18 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 use App\Models\Sucursal;
+use Illuminate\Support\Facades\DB as FacadesDB;
 
 class Sucursalx extends Controller
 {
     //
 
 public function index(){
- $sucursales = Sucursal::get();
- //dd($sucursales);
- return view('crearsucursal'); 
+    $sucursales = DB::select('select * from sucursal');
+    return view('crearsucursal',['sucursales' => $sucursales]);
 }
 
 public function store(Request $request){
@@ -25,7 +26,7 @@ public function store(Request $request){
         'direccion'=>$direccion,
         'telefono'=>$telefono,
         'email'=>$email);
-    DB::table('sucursal')->insert($data);
+   $user = DB::table('sucursal')->insert($data);
     
     return view('dashboard');
 }
