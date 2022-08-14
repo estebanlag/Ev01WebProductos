@@ -37,27 +37,9 @@ Route::get('/productoSucursal','App\Http\Controllers\ProductoController@Producto
 Route::post('/guardarproductoSucursal','App\Http\Controllers\ProductoController@GuardarProductoSucursal');
 
 Route::resource('/sucursalx','App\Http\Controllers\sucursalx');
+Route::resource('/prodsucursal','App\Http\Controllers\productosucursalx');
 //---------------------------------------------------------------
-Route::get('/prueba', function(){
-  $sucursal = DB::table('sucursal')->get();
-  $productos = DB::table('producto')->get();
 
-  echo "ingresa cantidad <b r><input type='number' class='form-control' placeholder='ingresa cantidad'><br>";
-  echo "ingresa valor <br><input type='number' class='form-control' placeholder='ingresa valor'><br>";
-  echo "<select name='sucursal'>";
-  foreach ($sucursal as $valor) {
-         echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
-     }
-    echo "</select><br>";
-
-    echo "<select name='productos'>";
-  foreach ($productos as $valor) {
-         echo "<option value=' {$valor->id}'>{$valor->nombre}</option>";
-     }
-    echo "</select><br>";
-
-
-});
 
 
 Route::get('/crearsucursal','App\Http\Controllers\SucursalController@index')->name("CrearSucursal");
