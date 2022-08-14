@@ -34,11 +34,7 @@
 
           </li>
 
-          <li class="nav-item">
-
-            <a class="nav-link text-primary" href="/mostrarcategoria">Ver tabla categoria</a>
-
-          </li>
+          
 
         </ul>
 
