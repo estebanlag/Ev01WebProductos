@@ -43,6 +43,4 @@ Route::resource('/prodsucursal','App\Http\Controllers\productosucursalx');
 
 
 
-Route::get('/crearsucursal','App\Http\Controllers\SucursalController@index')->name("CrearSucursal");
-Route::get('/crearcategoria','App\Http\Controllers\CategoriaController@index')->name("CrearCategoria");
 
