@@ -13,7 +13,6 @@ class categorias extends Controller
         $cat = Categoria::get();
         //dd($sucursales);
         
-        print_r($cat);
         return view('crearcategoria'); 
         
             }
