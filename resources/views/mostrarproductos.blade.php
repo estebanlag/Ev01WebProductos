@@ -46,7 +46,7 @@
       </table>
     </div>
 <br>
-<a href="/dashboard" type="button" class="btn btn-primary">Volver Atrás</a>
+<a href="/dashboard" type="button" class="btn btn-primary">Volver al inicio</a>
 
 
 @stop
