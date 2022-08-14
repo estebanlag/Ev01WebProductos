@@ -10,9 +10,8 @@ class Sucursalx extends Controller
     //
 
 public function index(){
- $sucursales = Sucursal::get();
- //dd($sucursales);
- return view('crearsucursal'); 
+    $sucursales = DB::select('select * from sucursal');
+    return view('crearsucursal',['sucursales' => $sucursales]);
 }
 
 public function store(Request $request){
