@@ -11,7 +11,7 @@
 <form method="POST" action="/categoria">
   <div class="mb-3">
     <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre">
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
   </div>
   <button type="submit" class="btn btn-primary">Guardar</button>
   <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
