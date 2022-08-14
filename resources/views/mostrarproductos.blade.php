@@ -8,6 +8,16 @@
 
 @section('content')
 
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"></a>
+    <form class="d-flex" role="search" action="{{ url('mostrarproducto') }}" method="get">
+      <input class="form-control me-2" value="" id="buscarproducto" name="buscarproducto" type="search" placeholder="Buscar producto" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
+
 <br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <table class="table table-striped" bgcolor="white">
