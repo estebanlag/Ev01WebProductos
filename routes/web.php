@@ -37,7 +37,7 @@ Route::resource('/prodcategoria','App\Http\Controllers\prodcategoria');
 Route::resource('/usuario','App\Http\Controllers\usuarios');
 Route::resource('/categoria','App\Http\Controllers\categorias');
 Route::resource('/producto','App\Http\Controllers\productos');
-Route::resource('/sucursalx','App\Http\Controllers\sucursalx');
+Route::resource('/sucursal','App\Http\Controllers\sucursalx');
 Route::resource('/prodsucursal','App\Http\Controllers\productosucursalx');
 //---------------------------------------------------------------
 
