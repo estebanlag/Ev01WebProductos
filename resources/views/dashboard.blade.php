@@ -36,7 +36,7 @@
   </a>
   </div>
   <div class="col-2">
-  <a href="#" class="mt-4 mb-4">
+  <a href="{{ url('categoria') }}" class="mt-4 mb-4">
      <button type="button" class="btn btn-primary">Crear Categoría</button>
   </a>
 </div>

@@ -14,7 +14,7 @@ class categorias extends Controller
         //dd($sucursales);
         
         print_r($cat);
-        return view('crearsucursal'); 
+        return view('crearcategoria'); 
         
             }
 }
