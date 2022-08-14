@@ -14,7 +14,7 @@
     <input type="text" class="form-control" id="nombre" name="nombre">
   </div>
   <button type="submit" class="btn btn-primary">Guardar</button>
-  <button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
+  <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
 </form>
 </div>
 
