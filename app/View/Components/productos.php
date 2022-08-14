@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\Component;
 
 class productos extends Component
@@ -15,12 +16,18 @@ class productos extends Component
     public $nombre;
     public $id;
     public $cantidad;
+    public $prueba;
     public function __construct($nombre,$id,$cantidad)
     {
+        
+        $sucursales = DB::table('productosucursal')->get();
+        $productos = DB::table('producto')->get();
+        $categorias = DB::table('productocategoria')->get();
 
         $this->$nombre=$nombre;
         $this->$id=$id;
         $this->$cantidad=$cantidad;
+       
         //
     }
 
@@ -31,7 +38,9 @@ class productos extends Component
      */
     public function render()
     {
-        return view('components.productos');
+
+        $test="sssssssssss";
+        return view('components.productos',['test'=>$test]);
     }
 
     
