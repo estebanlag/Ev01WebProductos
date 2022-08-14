@@ -11,7 +11,7 @@
             <a class="nav-link" href="">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="#">Producto Sucursal</a>
+            <a class="nav-link text-primary" href="prodsucursal/create">Producto Sucursal</a>
           </li>
         </ul>
       </div>
