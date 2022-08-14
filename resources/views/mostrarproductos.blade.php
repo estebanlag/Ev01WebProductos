@@ -28,6 +28,7 @@
               <th scope="col">Nombre</th>
               <th scope="col">Descripción</th>
               <th scope="col">Estado</th>
+              <th scope="col">Categoria</th>
               <th scope="col">Imagen</th>
             </tr>
           </thead>
@@ -44,8 +45,9 @@
           @endforeach
           </tbody>
       </table>
-</div>
+    </div>
 <br>
 <button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
+
 
 @stop

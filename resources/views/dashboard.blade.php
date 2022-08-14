@@ -16,6 +16,9 @@
           <li class="nav-item">
             <a class="nav-link text-primary" href="/mostrarproducto">Ver tabla producto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="/mostrarcategoria">Ver tabla categoria</a>
+          </li>
         </ul>
       </div>
       <div>
@@ -80,8 +83,6 @@
   <tbody>
 <?php $ix=1; ?>
 @for ($i = 2; $i < 8; $i++)
-
-
 
 
 @component('components.productos')
