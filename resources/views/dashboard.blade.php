@@ -8,7 +8,7 @@
 @section('header')
 
 <nav class="navbar navbar-expand-lg bg-light">
-<<<<<<< HEAD
+
 
     <div class="container-fluid">
 
@@ -24,7 +24,7 @@
 
           <li class="nav-item">
 
-            <a class="nav-link text-primary" href="prodsucursal/create">Producto Sucursal</a>
+            <a class="nav-link text-primary" href="prodsucursal">Producto Sucursal</a>
 
           </li>
 
@@ -60,30 +60,7 @@
 
     </div>
 
-=======
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-primary" href="prodsucursal/create">Producto Sucursal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-primary" href="/mostrarproducto">Ver tabla producto</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <form action='/logout' method="POST">
-          <a href="#" onclick="this.closest('form').submit()" class="text-decoration-none">
-             Logout
-          </a>
-        </form>
-      </div>
-    </div>
->>>>>>> 9879ae74bcfc9ec57acf437d6da3a534fc64cb15
+
 </nav>
 
 @stop
@@ -156,26 +133,10 @@
 
 
 <table class="table">
-<<<<<<< HEAD
-=======
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">nombre</th>
-      <th scope="col">cantidad</th>
-      <th scope="col">sucursal</th>
-      <th scope="col">cod</th>
-      <th scope="col">categoría</th>
-      <th scope="col">precio</th>
-      <th scope="col">descripción</th>
-      <th scope="col">acción</th>
-    </tr>
-    </tr>
-  </thead>
-  <tbody>
-<?php $ix=1; ?>
-@for ($i = 2; $i < 8; $i++)
->>>>>>> 9879ae74bcfc9ec57acf437d6da3a534fc64cb15
+
+  
+
+
 
   <thead>
 
