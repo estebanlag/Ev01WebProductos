@@ -16,7 +16,7 @@
       <td>descripción</td>
       
     
-      <td>  <a href="../actualiza/{{$nombre}}/{{$cantidad}}/{{$sucursal}}" <button class="btn btn-primary" id="{{$id}}">Actualizar</button></a>
-                <a href="../elimina/{{$nombre}}/{{$cantidad}}" <button class="btn btn-danger" id="{{$id}}">Eliminar</button></a>
+      <td>  <a href="#" <button class="btn btn-primary" id="{{$id}}">Actualizar</button></a>
+                <a href="#" <button class="btn btn-danger" id="{{$id}}">Eliminar</button></a>
             </td>
     </tr>

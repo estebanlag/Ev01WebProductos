@@ -14,7 +14,7 @@ class ProductoSucursalx extends Controller
         $prodsucursal = ProductoSucursal::get();
        // dd($prodsucursal);
         
-        //print_r($prodsucursal);
+        print_r($prodsucursal);
 
 
         $sucursal = DB::table('sucursal')->get();
