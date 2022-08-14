@@ -12,22 +12,26 @@ class Sucursalx extends Controller
     //
 
 public function index(){
-    $sucursales = DB::select('select * from sucursal');
+    $sucursales = Sucursal::get();
     return view('crearsucursal',['sucursales' => $sucursales]);
 }
 
 public function store(Request $request){
-    $nombre = $request->input('nombre');
-    $direccion = $request->input('direccion');
-    $telefono = $request->input('telefono');
-    $email = $request->input('email');
-    $data = array(
-        'nombre'=>$nombre,
-        'direccion'=>$direccion,
-        'telefono'=>$telefono,
-        'email'=>$email);
-   $user = DB::table('sucursal')->insert($data);
-    
-    return view('dashboard');
+
+    $this->validate($request, [
+      'nombre' => 'required',
+      'direccion' => 'required',
+      'telefono' => 'required',
+      'email' => 'required'
+    ]);
+     
+     $nuevaSucursal = new Sucursal();
+     $nuevaSucursal->nombre = $request->nombre;
+     $nuevaSucursal->direccion = $request->direccion;
+     $nuevaSucursal->telefono = $request->telefono;
+     $nuevaSucursal->email = $request->email;
+     $nuevaSucursal->save();
+
+     return view('dashboard');
 }
 }
