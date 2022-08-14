@@ -35,8 +35,8 @@ Route::get('/crearproducto','App\Http\Controllers\ProductoController@index')->na
 Route::post('/productoGuardar','App\Http\Controllers\ProductoController@guardar');
 Route::get('/productoSucursal','App\Http\Controllers\ProductoController@ProductoSucursal')->name("ProductoSucursal");
 Route::post('/guardarproductoSucursal','App\Http\Controllers\ProductoController@GuardarProductoSucursal');
-<<<<<<< HEAD
-Route::resource('/sucursal','App\Http\Controllers\sucursalx');
+
+Route::resource('/sucursalx','App\Http\Controllers\sucursalx');
 //---------------------------------------------------------------
 Route::get('/prueba', function(){
   $sucursal = DB::table('sucursal')->get();
@@ -58,8 +58,8 @@ Route::get('/prueba', function(){
 
 
 });
-=======
+
 
 Route::get('/crearsucursal','App\Http\Controllers\SucursalController@index')->name("CrearSucursal");
 Route::get('/crearcategoria','App\Http\Controllers\CategoriaController@index')->name("CrearCategoria");
->>>>>>> 020a980a65b3c05f82256b0e0e396080892889f2
+
