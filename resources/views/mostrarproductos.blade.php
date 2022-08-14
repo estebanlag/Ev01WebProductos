@@ -1,10 +1,15 @@
 @extends('layouts.master')
 @section('title','producto sucursal')
 
-@section('content')
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    
+@section('header')
+<br>
+<h2 style="text-align:center">Tabla producto</h2>
+@stop
 
+@section('content')
+
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
     <table class="table table-striped" bgcolor="white">
         <thead>
             <tr>
@@ -25,12 +30,12 @@
               <td>{{ $producto->descripcion }}</td>
               <td>{{ $producto->estado }}</td>
               <td><img src="{{ $producto->image }}" width="50" height="50" class="img-thumbnail"></td>
-              <td><button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button></td>
-              <td><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></td>
           </tr>
           @endforeach
           </tbody>
       </table>
 </div>
+<br>
+<button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
 
 @stop

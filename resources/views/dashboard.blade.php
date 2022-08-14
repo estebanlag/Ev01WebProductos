@@ -13,6 +13,9 @@
           <li class="nav-item">
             <a class="nav-link text-primary" href="prodsucursal/create">Producto Sucursal</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="/mostrarproducto">Ver tabla producto</a>
+          </li>
         </ul>
       </div>
       <div>
