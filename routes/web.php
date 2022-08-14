@@ -28,7 +28,6 @@ Route::post('/logout','App\Http\Controllers\LoginController@logout');
 Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
 Route::get('/mostrarproducto', 'App\Http\Controllers\DashboardController@mostrarproductos');
 
-Route::get('/mostrarcategoria', 'App\Http\Controllers\categorias@mostrarcategoria');
 
 Route::get('/crearproducto', 'App\Http\Controllers\productos@formulario');
 
@@ -42,6 +41,7 @@ Route::resource('/prodcategoria','App\Http\Controllers\prodcategoria');
 Route::resource('/usuario','App\Http\Controllers\usuarios');
 Route::resource('/categoria','App\Http\Controllers\categorias');
 Route::resource('/producto','App\Http\Controllers\productos');
+Route::Post('/mostrarproducto','App\Http\Controllers\productos@store');
 Route::resource('/sucursal','App\Http\Controllers\sucursalx');
 Route::resource('/prodsucursal','App\Http\Controllers\productosucursalx');
 //---------------------------------------------------------------

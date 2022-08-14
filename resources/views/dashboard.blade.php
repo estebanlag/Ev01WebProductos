@@ -16,9 +16,6 @@
           <li class="nav-item">
             <a class="nav-link text-primary" href="/mostrarproducto">Ver tabla producto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-primary" href="/mostrarcategoria">Ver tabla categoria</a>
-          </li>
         </ul>
       </div>
       <div>
@@ -73,7 +70,7 @@
       <th scope="col">cantidad</th>
       <th scope="col">sucursal</th>
       <th scope="col">cod</th>
-      <th scope="col">categoria</th>
+      <th scope="col">categoría</th>
       <th scope="col">precio</th>
       <th scope="col">descripción</th>
       <th scope="col">acción</th>

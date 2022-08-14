@@ -3,7 +3,7 @@
 
 @section('header')
 
-<h2  class="text-center mt-4 mb-4">Crear Categoria</h2>
+<h2  class="text-center mt-4 mb-4">Crear Categoría</h2>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
 </form>
 </div>
 <div class="w-50 text-center container mt-4 mb-5">
-  <h2 class="text-center m-4">Sucursales</h2>
+  <h2 class="text-center m-4">Categorías</h2>
   <table class="table table-bordered table-striped">
     <thead>
       <tr>

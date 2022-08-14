@@ -19,19 +19,6 @@ class categorias extends Controller
         ]);
 }
 
-public function mostrarcategoria(Request $request){
-       
-    $mostrarcategoria = $request->mostrarcategoria;
-
-    $categorias = Categoria::where('nombre', 'LIKE', '%'.$mostrarcategoria.'%')
-    ->orWhere('estado', 'LIKE', '%'.$mostrarcategoria.'%')
-    ->get();
-    
-    return view('mostrarcategoria', [
-        'categorias' => $categorias
-    ]);
-}
-
             public function create(){
                 
                 
