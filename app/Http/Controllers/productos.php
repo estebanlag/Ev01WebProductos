@@ -11,7 +11,6 @@ class productos extends Controller
         $productos = Producto::get();
         //dd($sucursales);
         
-        print_r($productos);
         return view('crearsucursal'); 
         
             }
