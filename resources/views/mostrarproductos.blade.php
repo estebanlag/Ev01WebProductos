@@ -28,7 +28,6 @@
               <th scope="col">Nombre</th>
               <th scope="col">Descripción</th>
               <th scope="col">Estado</th>
-              <th scope="col">Categoria</th>
               <th scope="col">Imagen</th>
             </tr>
           </thead>
@@ -47,7 +46,7 @@
       </table>
     </div>
 <br>
-<button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
+<a href="/dashboard" type="button" class="btn btn-primary">Volver al inicio</a>
 
 
 @stop
