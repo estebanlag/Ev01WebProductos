@@ -65,7 +65,7 @@
     <h2>Productos</h2>
 
   </div>
-<!--
+
     <div class="col-4">
 
    <form class="d-flex" role="search" action="/buscar" method="POST">
@@ -77,7 +77,7 @@
     </form>
 
   </div>
- -->
+
 
   
 </div>
