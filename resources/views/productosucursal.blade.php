@@ -50,7 +50,7 @@
   </select>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
-  <button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
+  <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
 </form>
 </div>
 
