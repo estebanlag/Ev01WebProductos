@@ -26,13 +26,33 @@ $cont++;
       ->orWhere('codigo', 'LIKE', '%'.$buscardashboard.'%')
       ->orderBy('id', 'ASC')
       ->get();
-      $categoria= DB::table('categoria')->where('id', $valor->producto_id)->get();
-      $sucursal= DB::table('sucursal')->where('id', $valor->sucursal_id)->get();
+     
+      $categoria= DB::table('productocategoria')->where('id_producto', $valor->id)->get();
+      $sucursal= DB::table('productosucursal')->where('producto_id', $valor->id)->get();
         
+      foreach($categoria as $cat){
+              $nombrecat= DB::table('categoria')->where('id', $cat->id_categoria)->get();
+
+        foreach($nombrecat as $nomcat){
+          //$nomcat->nombre
+        }
+
+      }
         
+      foreach($sucursal as $suc){
+        $nombresucursal= DB::table('sucursal')->where('id', $suc->Sucursal_id)->get();
+
+        foreach($nombresucursal as $nomsuc){
+          //$nomcat->nombre
+        }
+
+
+      }
 
 
     foreach($producto as $valorproducto){
+
+      
       
      // $codigo= $td."{$valorproducto->codigo}";
    //   $descripcion= $td."{$valorproducto->descripcion}";
@@ -51,9 +71,9 @@ $cont++;
     $td="<tr><th>$cont</th>".
     "<td>$valorproducto->nombre</td>".
     "<td>$valor->Cantidad</td>".
-    "<td>$valorsucursal->nombre</td>".
+    "<td>$nomsuc->nombre</td>".
     "<td>$valorproducto->codigo</td>".
-    "<td>$valorcategoria->nombre</td>".
+    "<td>$nomcat->nombre</td>".
     "<td>$valor->Precio</td>".
     "<td>$valorproducto->descripcion</td>".
     "<td><button class='btn btn-success'>editar</button>".
