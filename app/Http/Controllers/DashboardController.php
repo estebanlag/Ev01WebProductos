@@ -40,7 +40,7 @@ $cont++;
       }
         
       foreach($sucursal as $suc){
-        $nombresucursal= DB::table('sucursal')->where('id', $suc->Sucursal_id)->get();
+        $nombresucursal= DB::table('sucursal')->where('id', $suc->sucursal_id)->get();
 
         foreach($nombresucursal as $nomsuc){
           //$nomcat->nombre
