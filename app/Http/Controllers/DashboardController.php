@@ -76,8 +76,8 @@ $cont++;
     "<td>$nomcat->nombre</td>".
     "<td>$valor->Precio</td>".
     "<td>$valorproducto->descripcion</td>".
-    "<td><button class='btn btn-success'>editar</button>".
-    "<button class='btn btn-danger'>eliminar</button>".
+    "<td><button class='btn btn-success'>Editar</button>".
+    "<button class='btn btn-danger' style='margin: 5px;'>Eliminar</button>".
     "</td>".
     "</tr>".$td;
 
