@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-<form method="POST" action='/mostrarproducto'>
+<form method="POST" action='/producto'>
   <div class="mb-3">
     <label for="nombre" class="form-label">Codigo</label>
     <input type="text" class="form-control" id="codigo" name="codigo">
