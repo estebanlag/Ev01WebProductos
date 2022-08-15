@@ -65,8 +65,8 @@
     <h2>Productos</h2>
 
   </div>
-
-  <div class="col-4">
+<!--
+    <div class="col-4">
 
    <form class="d-flex" role="search" action="{{ url('dashboard') }}" method="GET">
 
@@ -77,7 +77,9 @@
     </form>
 
   </div>
+ -->
 
+  
 </div>
 
 <div class="row">
