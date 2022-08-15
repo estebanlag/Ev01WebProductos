@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
 
-   
-     
+      $buscardashboard = $request->buscardashboard;
+
       $productosucursal = DB::table('productosucursal')->get();
    
 $td="";
@@ -21,7 +21,11 @@ $cont++;
 
 
 
-      $producto= DB::table('producto')->where('id',$valor->producto_id)->get();
+      $producto= DB::table('producto')->where('id',$valor->producto_id)
+      ->orWhere('nombre', 'LIKE', '%'.$buscardashboard.'%')
+      ->orWhere('codigo', 'LIKE', '%'.$buscardashboard.'%')
+      ->orderBy('id', 'ASC')
+      ->get();
       $categoria= DB::table('categoria')->where('id', $valor->producto_id)->get();
       $sucursal= DB::table('sucursal')->where('id', $valor->sucursal_id)->get();
         
@@ -62,21 +66,5 @@ $cont++;
 
     
       return view('dashboard', ['td'=>$td]);
-    }
-
-
-    public function mostrarproductos(Request $request){
-
-      $buscarproducto = $request->buscarproducto;
-
-      $productos = Producto::where('nombre', 'LIKE', '%'.$buscarproducto.'%')
-      ->orWhere('codigo', 'LIKE', '%'.$buscarproducto.'%')
-      ->get();
-
-      return view('mostrarproductos', [
-        'productos' => $productos
-  ]);
-
-  
 }
 }

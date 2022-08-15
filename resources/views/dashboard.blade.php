@@ -111,9 +111,9 @@
 
   <div class="col-4">
 
-   <form class="d-flex" role="search">
+   <form class="d-flex" role="search" action="{{ url('dashboard') }}" method="GET">
 
-        <input class="form-control me-2" type="search" placeholder="SKU, Nombre, o Sucursal" aria-label="Search">
+        <input class="form-control me-2" type="search" id="buscardashboard" name="buscardashboard" placeholder="SKU, Nombre, o Sucursal" aria-label="Search">
 
         <button class="btn btn-outline-success" type="submit">Buscar</button>
 

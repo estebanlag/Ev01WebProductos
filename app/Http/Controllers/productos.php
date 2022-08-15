@@ -91,5 +91,18 @@ class productos extends Controller
         $sucursales = DB::table('sucursal')->get();
         $categorias = DB::table('categoria')->get();
         return view("crearproducto",['sucursales' => $sucursales],['categorias' => $categorias]);
-    }                                          
+    }
+    
+    public function mostrarproductos(Request $request){
+
+        $buscarproducto = $request->buscarproducto;
+  
+        $productos = Producto::where('nombre', 'LIKE', '%'.$buscarproducto.'%')
+        ->orWhere('codigo', 'LIKE', '%'.$buscarproducto.'%')
+        ->get();
+  
+        return view('mostrarproductos', [
+          'productos' => $productos
+    ]); 
+  }
 }
