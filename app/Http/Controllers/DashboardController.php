@@ -53,8 +53,8 @@ $cont++;
     "<td>$valorcategoria->nombre</td>".
     "<td>$valor->Precio</td>".
     "<td>$valorproducto->descripcion</td>".
-    "<td><button class='btn btn-success'>editar</button>".
-    "<button class='btn btn-danger'>eliminar</button>".
+    "<td><button class='btn btn-success' style='margin: 5px';>Editar</button>".
+    "<button class='btn btn-danger' style='margin: 5px';>Eliminar</button>".
     "</td>".
     "</tr>".$td;
 
@@ -129,8 +129,8 @@ try {
   "<td>$categorianombre->nombre</td>".
   "<td>$idsucursal->Precio</td>".
   "<td>$valor->descripcion</td>".
-  "<td><button class='btn btn-success'>editar</button>".
-  "<button class='btn btn-danger'>eliminar</button>".
+  "<td><button class='btn btn-success' style='margin: 5px';>Editar</button>".
+  "<button class='btn btn-danger' style='margin: 5px';>Eliminar</button>".
   "</td>".
   "</tr>";
 } catch (\Throwable $th) {
