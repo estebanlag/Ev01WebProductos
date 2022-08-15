@@ -10,6 +10,7 @@ class ProductoSucursal extends Model
     use HasFactory;
     protected $primarykey ='id';
     protected $table = 'productosucursal';
+    public $timestamps = false;
 
 public function productosucursal(){
 

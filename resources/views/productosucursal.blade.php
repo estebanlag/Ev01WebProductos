@@ -9,14 +9,14 @@
 
 @section('content')
 <div class="container">
-<form method="post" action="{{ url('/guardarproductoSucursal') }}">
+<form method="POST" action="/prodsucursal">
   <div class="mb-3">
     <label for="nombre" class="form-label">Codigo Producto sucursal</label>
-    <input type="text" class="form-control" id="codigo" name="codigo">
+    <input type="text" class="form-control" id="codigo" name="cod_Producto_Sucursal">
   </div>
   <div class="mb-3">
   <label for="sucursal" class="form-label">Producto</label>
-  <select class="form-select" aria-label="producto" id="producto" name="producto">
+  <select class="form-select" aria-label="producto" id="producto" name="producto_id">
     <option selected disabled>Seleccione un producto</option>
 @foreach($productos as $producto)
 
@@ -27,17 +27,21 @@
  
   <div class="mb-3">
     <label for="cantidad" class="form-label">Cantidad</label>
-    <input type="text" class="form-control" id="cantidad" name="cantidad">
+    <input type="text" class="form-control" id="cantidad" name="Cantidad">
+  </div>
+  <div class="mb-3">
+    <label for="cantidad" class="form-label">estado</label>
+    <input type="text" class="form-control" id="cantidad" name="estado">
   </div>
  
   <div class="mb-3">
     <label for="cantidad" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="precio" name="precio">
+    <input type="text" class="form-control" id="precio" name="Precio">
   </div>
   
   <div class="mb-3">
   <label for="sucursal" class="form-label">Sucursal</label>
-  <select class="form-select" aria-label="sucursal" id="sucursal" name="sucursal">
+  <select class="form-select" aria-label="sucursal" id="sucursal" name="sucursal_id">
     <option selected disabled>Seleccione una Sucursal</option>
 @foreach($sucursales as $sucursal)
 
@@ -49,6 +53,10 @@
   <button class="btn btn-primary" onClick="history.back()">Volver Atras</button>
 </form>
 </div>
+
+@foreach ($sucursales as $sucursal)
+
+@endforeach
 
 @stop
 
