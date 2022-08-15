@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -15,8 +15,20 @@ class LoginController extends Controller
         return view('login.loged');
     }
 
-    public function register(){
+    public function vistaRegistrar(){
         return view('login.registrarse');
+    }
+
+    public function register(Request $request){
+        $nuevoUsuario = new Usuario();
+        $nuevoUsuario->nombre_completo = $request->nombre;
+        $nuevoUsuario->email = $request->email;
+        $nuevoUsuario->password = $request->password;
+        $nuevoUsuario->estado = 1;
+     
+        if($nuevoUsuario->save()){
+          return view('login.login');
+        }
     }
 
     public function recuperarContraseña(){

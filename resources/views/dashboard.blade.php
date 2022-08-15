@@ -67,43 +67,26 @@
 
 <div class="container-fluid">
 
-  <br>
+  <br>
 
 <div class="row">
 
-  <div class="col-2">
+  <div class="col-2">
+  <a href="{{url('crearproducto')}}" class="btn btn-primary">Crear Producto</a>
+  </div>
 
-  <a href="{{url('crearproducto')}}" class="mt-4 mb-4">
-
-     <button type="button" class="btn btn-primary">Crear Producto</button>
-
-  </a>
-
-  </div>
-
-  <div class="col-2">
-
-  <a href="{{ url('categoria') }}" class="mt-4 mb-4">
-
-     <button type="button" class="btn btn-primary">Crear Categoría</button>
-
-  </a>
-
+  <div class="col-2">
+  <a href="{{ url('categoria') }}" class="btn btn-primary">Crear Categoría</a>
 </div>
 
 <div class="col-2">
-
-<a href="{{url('sucursal')}}" class="mt-4 mb-4">
-
-     <button type="button" class="btn btn-primary">Crear Sucursal</button>
-
-  </a>
-
+<a href="{{url('sucursal')}}" class="btn btn-primary">Crear Sucursal</a>
 </div>
 
-  
+<br>
+<br>
 
-  <div class="col-8">
+  <div class="col-7">
 
     <h2>Productos</h2>
 
@@ -125,13 +108,7 @@
 
 <div class="row">
 
-
-
-
 <table class="table">
-
-  
-
 
 
   <thead>
@@ -140,21 +117,21 @@
 
       <th scope="col">#</th>
 
-      <th scope="col">nombre</th>
+      <th scope="col">Nombre</th>
 
-      <th scope="col">cantidad</th>
+      <th scope="col">Cantidad</th>
 
-      <th scope="col">sucursal</th>
+      <th scope="col">Sucursal</th>
 
-      <th scope="col">cod</th>
+      <th scope="col">Código</th>
 
-      <th scope="col">categoria</th>
+      <th scope="col">Categoría</th>
 
-      <th scope="col">precio</th>
+      <th scope="col">Precio</th>
 
-      <th scope="col">descripción</th>
+      <th scope="col">Descripción</th>
 
-      <th scope="col">acción</th>
+      <th scope="col">Acción</th>
 
     </tr>
 

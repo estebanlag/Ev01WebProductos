@@ -36,7 +36,7 @@
  
  
   <button type="submit" class="btn btn-primary">Guardar</button>
-  <a href="/dashboard" type="button" class="btn btn-primary">Volver atrás</a>
+  <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
 </form>
 </div>
 
