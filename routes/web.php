@@ -42,7 +42,10 @@ Route::post('/buscar', 'App\Http\Controllers\DashboardController@buscar')->name(
 Route::resource('/prodcategoria','App\Http\Controllers\prodcategoria');
 Route::resource('/usuario','App\Http\Controllers\usuarios');
 Route::resource('/categoria','App\Http\Controllers\categorias');
+
 Route::resource('/producto','App\Http\Controllers\productos');
+Route::get('/imagen/{filename}','App\Http\Controllers\productos@getImagen');
+
 Route::Post('/mostrarproducto','App\Http\Controllers\productos@store');
 Route::resource('/sucursal','App\Http\Controllers\sucursalx');
 Route::resource('/prodsucursal','App\Http\Controllers\Productosucursalx');

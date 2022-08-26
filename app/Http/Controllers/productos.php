@@ -32,7 +32,6 @@ class productos extends Controller
             public function store(Request $request) {
                        
                 $this->validate($request,  [
-
                     'codigo' => 'required',
                     'nombre' => 'required',
                     'estado' => 'required',
@@ -40,12 +39,19 @@ class productos extends Controller
                     'descripcion' => 'required'
                 ]);
 
+                $image = $request->file('image');
+
+                if($image){
+                    $image_path = time()."-".$image->getClientOriginalName();
+                    \Storage::disk('images')->put($image_path, \File::get($image));
+                }
+
                 $producto = new Producto();
                 $producto->codigo = $request->codigo;
                 $producto->nombre = $request->nombre;
                 $producto->descripcion = $request->descripcion;
                 $producto->estado = $request->estado;
-                $producto->image = $request->image;              
+                $producto->image = $image_path;              
                
                 $producto->save();
 
@@ -104,5 +110,10 @@ class productos extends Controller
         return view('mostrarproductos', [
           'productos' => $productos
     ]); 
+  }
+
+  public function getImagen($filename){
+    $file = \Storage::disk('images')->get($filename);
+    return new Response($file,200);
   }
 }

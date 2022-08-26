@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-<form method="POST" action='/producto'>
+<form method="POST" action='/producto' enctype="multipart/form-data">
   <div class="mb-3">
     <label for="nombre" class="form-label">Codigo</label>
     <input type="text" class="form-control" id="codigo" name="codigo">
@@ -24,8 +24,8 @@
   </div>
   
   <div class="mb-3">
-  <label for="image" class="form-label">img</label>
-  <input type="text" name='image' id='image' class="form-control">
+  <label for="image" class="form-label">Imagen</label>
+  <input type="file" name='image' id='image' class="form-control" accept=".png, .jpg, .jpeg">
 
   </div>
   
