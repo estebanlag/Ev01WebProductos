@@ -62,18 +62,21 @@ class productos extends Controller
             }  
             
             public function update(producto $producto,Request $request){
-
-                echo $request->id."<br>";
-                echo $request->nombre."<br>";
-                echo $request->codigo."<br>";
-                echo $request->descripcion."<br>";
-                echo $request->estado."<br>";
-                echo $request->image."<br>";
+$productos=new Producto();
+            
                 
-                
-                //obtenemos el nombre del archivo
-                $request->file('image')->store('public');
-                            $ruta="storage/".$request->file('image');
+                if($request->hasFile("image")){
+              $img=      $request->file('image');
+              $ruta=      "storage/public/imagen/";
+              $filename=time()."-".$img->getClientOriginalName();
+              $upload=$request->file('image')->move($ruta,$filename);
+              $productos->image=$ruta.$filename;
+              $ruta = $ruta.$filename;
+echo $ruta.$filename;
+                }else {
+                    $ruta="no hay ruta";
+                }
+               
                             echo $ruta;
                 $productos = Producto::findOrFail($request->id);
                 $productos->codigo=$request->codigo;
@@ -82,6 +85,7 @@ class productos extends Controller
                 $productos->estado=$request->estado;
                 $productos->image=$ruta;
                 
+
                         $productos->save();     
                          echo "update productos";
                         
