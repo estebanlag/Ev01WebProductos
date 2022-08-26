@@ -102,6 +102,37 @@ class categorias extends Controller
             'categorias' => $categorias
         ]);
     }
+
+    public function update($id){
+
+        $categoria = Categoria::where('id', $id)->get();
+
+        return view('editarcategoria', [
+
+            'categoria' => $categoria
+        ]);
+    }
+
+    public function updateSave(Request $request){
+
+        $this->validate($request, [
+
+            'nombre'=>'required'
+        ]);
+
+        $categoria = Categoria::where('id', $request->id)
+        ->update([
+
+            'nombre'=> $request->nombre
+        ]);
+
+        $categorias = Categoria::get();
+
+        return view('crearcategoria', [
+
+            'categorias'=> $categorias
+        ]);
+    }
         
 
 }

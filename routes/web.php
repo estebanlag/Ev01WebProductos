@@ -35,6 +35,9 @@ Route::post('/buscar', 'App\Http\Controllers\DashboardController@buscar')->name(
 
 Route::get('/categoriadelete/{id}', 'App\Http\Controllers\categorias@delete');
 
+Route::get('/categoriaupdate/{id}', 'App\Http\Controllers\categorias@update');
+Route::post('/categoriaupdated', 'App\Http\Controllers\categorias@updateSave');
+
 
 
 

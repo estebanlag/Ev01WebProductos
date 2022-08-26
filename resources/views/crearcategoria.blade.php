@@ -14,7 +14,7 @@
     <input type="text" class="form-control" id="nombre" name="nombre" required>
   </div>
   <button type="submit" class="btn btn-primary">Guardar</button>
-  <a class="btn btn-primary" onClick="history.back()">Volver Atras</a>
+  <a class="btn btn-primary" href="/dashboard">Volver</a>
 </form>
 </div>
 <div class="w-50 text-center container mt-4 mb-5">
@@ -37,7 +37,7 @@
       <td>{{ FormatTime::LongTimeFilterCreated($categoria->created_at) }}</td>
       <td>{{ FormatTime::LongTimeFilterUpdated($categoria->updated_at) }}</td>
       <td>  
-        <a href="#" <button class="btn btn-primary">Actualizar</button></a>
+        <a href="/categoriaupdate/{{ $categoria->id }}" <button class="btn btn-primary">Actualizar</button></a>
         <a href="/categoriadelete/{{ $categoria->id }}" <button class="btn btn-danger">Eliminar</button></a>
        </td>
       </tr>
