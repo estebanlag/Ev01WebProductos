@@ -61,7 +61,32 @@ class productos extends Controller
                     'productos' => $productos]);
             }  
             
+            public function update(producto $producto,Request $request){
 
+                echo $request->id."<br>";
+                echo $request->nombre."<br>";
+                echo $request->codigo."<br>";
+                echo $request->descripcion."<br>";
+                echo $request->estado."<br>";
+                echo $request->image."<br>";
+                
+                
+                //obtenemos el nombre del archivo
+                $request->file('image')->store('public');
+                            $ruta="storage/".$request->file('image');
+                            echo $ruta;
+                $productos = Producto::findOrFail($request->id);
+                $productos->codigo=$request->codigo;
+                $productos->nombre=$request->nombre;
+                $productos->descripcion=$request->descripcion;
+                $productos->estado=$request->estado;
+                $productos->image=$ruta;
+                
+                        $productos->save();     
+                         echo "update productos";
+                        
+                         //return view('crearsucursal'); 
+                        }    
        
                             
         public function destroy(producto $producto)
