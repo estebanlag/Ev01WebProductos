@@ -29,6 +29,8 @@
               <th scope="col">Descripción</th>
               <th scope="col">Estado</th>
               <th scope="col">Imagen</th>
+              <th scope="col">Creado</th>
+              <th scope="col">Actualizado</th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +42,8 @@
               <td>{{ $producto->descripcion }}</td>
               <td>{{ $producto->estado }}</td>
               <td><img src="{{ $producto->image }}" width="50" height="50" class="img-thumbnail"></td>
+              <td>{{ FormatTime::LongTimeFilterCreated($producto->created_at) }}</td>
+              <td>{{ FormatTime::LongTimeFilterUpdated($producto->updated_at) }}</td>
           </tr>
           @endforeach
           </tbody>

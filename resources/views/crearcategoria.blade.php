@@ -24,6 +24,8 @@
       <tr>
         <th>Id</th>
         <th>Nombre</th>
+        <th>Creado</th>
+        <th>Actualizado</th>
         <th>Acción</th>
       </tr>
     </thead>
@@ -32,6 +34,8 @@
       <tr>
       <td>{{ $categoria->id }}</td>
       <td>{{ $categoria->nombre }}</td>
+      <td>{{ FormatTime::LongTimeFilterCreated($categoria->created_at) }}</td>
+      <td>{{ FormatTime::LongTimeFilterUpdated($categoria->updated_at) }}</td>
       <td>  
         <a href="#" <button class="btn btn-primary">Actualizar</button></a>
         <a href="#" <button class="btn btn-danger">Eliminar</button></a>

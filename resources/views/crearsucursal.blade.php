@@ -38,6 +38,8 @@
         <th>Dirección</th>
         <th>Telefono</th>
         <th>Email</th>
+        <th>Creado</th>
+        <th>Actualizado</th>
         <th>Acción</th>
       </tr>
     </thead>
@@ -48,6 +50,8 @@
       <td>{{ $sucursal->direccion }}</td>
       <td>{{ $sucursal->telefono }}</td>
       <td>{{ $sucursal->email }}</td>
+      <td>{{ FormatTime::LongTimeFilterCreated($sucursal->created_at) }}</td>
+      <td>{{ FormatTime::LongTimeFilterUpdated($sucursal->updated_at) }}</td>
       <td>  
         <a href="#" <button class="btn btn-primary">Actualizar</button></a>
         <a href="#" <button class="btn btn-danger">Eliminar</button></a>
