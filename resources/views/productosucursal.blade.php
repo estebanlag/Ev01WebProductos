@@ -11,8 +11,13 @@
 <div class="container">
 <form method="POST" action="/prodsucursal">
   <div class="mb-3">
-    <label for="nombre" class="form-label">Codigo Producto sucursal</label>
-    <input type="text" class="form-control" id="codigo" name="cod_Producto_Sucursal">
+    <label for="sucursal" class="form-label">Código producto</label>
+    <select class="form-select" aria-label="producto" id="codigo" name="cod_Producto_Sucursal">
+      <option selected disabled>Seleccione un código</option>
+      @foreach($productos as $producto)
+        <option value="{{$producto->id}}">{{$producto->codigo}}</option>
+      @endforeach
+    </select>
   </div>
   <div class="mb-3">
   <label for="sucursal" class="form-label">Producto</label>
