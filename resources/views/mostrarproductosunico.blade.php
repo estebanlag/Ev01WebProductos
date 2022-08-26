@@ -27,12 +27,29 @@
               <td>{{$productos->descripcion}}</td>
               <td>{{$productos->estado}}</td>
               <td><img src="{{ $productos->image }}" width="50" height="50" class=""></td>
-              <td><a href="/producto/update/{{$productos->id}}"><button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button></a></td>
+              
               <td><a href="/producto/destroy/{{$productos->id}}"><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></a></td>
           </tr>
+
         
           </tbody>
       </table>
+
+ 
+
+
+    </div>
+<div class='col-md-12'>
+<form method="POST" action="{{$productos->id}}" enctype="multipart/form-data">
+{{ method_field('PUT') }}
+<input type="hidden" name="id" value="{{$productos->id}}">
+<label> Codigo<input type="text" name="codigo" class='form-control' value="{{$productos->codigo}}" /></label>
+<label>Nombre<input type="text" name="nombre" class='form-control' value="{{$productos->nombre}}" /></label>
+<label>Descripción<input type="text" name="descripcion" class='form-control' value="{{$productos->descripcion}}"/></label>
+<label>Estado<input type="number" name="estado" max='1' class='form-control' value="{{$productos->estado}}"/></label>
+<label>Imagen<input type="file" name="image" class='form-control' value="{{$productos->image}}"/></label>
+<input type="submit" class='btn btn-success' value="actualizar"/>
+</form>
 </div>
 
 @stop

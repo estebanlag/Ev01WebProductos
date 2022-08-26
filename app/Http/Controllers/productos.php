@@ -6,6 +6,7 @@ use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class productos extends Controller
 {
     public function index(){
@@ -55,12 +56,31 @@ class productos extends Controller
             }  
             
 
-        public function update(){
-         $productos = Producto::get();
-                     //dd($sucursales);
+        public function update(producto $producto,Request $request){
+
+echo $request->id."<br>";
+echo $request->nombre."<br>";
+echo $request->codigo."<br>";
+echo $request->descripcion."<br>";
+echo $request->estado."<br>";
+echo $request->image."<br>";
+
+
+//obtenemos el nombre del archivo
+$request->file('image')->store('public');
+            $ruta="storage/".$request->file('image');
+            echo $ruta;
+$productos = Producto::findOrFail($request->id);
+$productos->codigo=$request->codigo;
+$productos->nombre=$request->nombre;
+$productos->descripcion=$request->descripcion;
+$productos->estado=$request->estado;
+$productos->image=$ruta;
+
+        $productos->save();     
          echo "update productos";
-         print_r($productos);
-         return view('crearsucursal'); 
+        
+         //return view('crearsucursal'); 
         }    
                             
         public function destroy(producto $producto)
@@ -105,4 +125,6 @@ class productos extends Controller
           'productos' => $productos
     ]); 
   }
+
+  
 }
