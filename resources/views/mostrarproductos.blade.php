@@ -43,7 +43,7 @@
               <td>{{ $producto->estado }}</td>
               <td>
                 @if(Storage::disk('images')->has($producto->image))
-                  <img src="{{ url('miniatura/'. $producto->image) }}" width="50" height="50" class="card-img-top" alt="">
+                  <img src="{{ url('miniatura/'. $producto->image) }}" width="50" height="50" class="img-thumbnail" alt="">
                 @else
                   <img src="{{ $producto->image }}" width="50" height="50" class="img-thumbnail">
                 @endif
