@@ -33,6 +33,8 @@ Route::get('/mostrarproducto', 'App\Http\Controllers\productos@mostrarproductos'
 Route::get('/crearproducto', 'App\Http\Controllers\productos@formulario');
 Route::post('/buscar', 'App\Http\Controllers\DashboardController@buscar')->name('busqueda');
 
+Route::get('/categoriadelete/{id}', 'App\Http\Controllers\categorias@delete');
+
 
 
 

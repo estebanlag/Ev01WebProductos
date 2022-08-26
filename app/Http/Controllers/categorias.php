@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\ProductoCategoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -87,6 +88,20 @@ class categorias extends Controller
                   
                     return view('dashboard', ['td'=>$td]);
             }
+
+    public function delete($id){
+
+        $categoriaEliminar = Categoria::find($id);
+
+        $categoriaEliminar->delete();
+
+        $categorias = Categoria::get();
+
+        return view('crearcategoria', [
+
+            'categorias' => $categorias
+        ]);
+    }
         
 
 }
