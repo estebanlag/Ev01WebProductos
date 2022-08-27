@@ -22,7 +22,33 @@
   <input type="number" name='estado' id='estado' class="form-control">
 
   </div>
-  
+  Sucursal
+
+<select class="form-control" name="sucursal">
+
+@foreach($sucursales as $sucursal)
+
+<option value="{{$sucursal->id}}">{{$sucursal->nombre}}</option>
+
+
+
+@endforeach
+
+</select>
+
+Categoría
+
+<select class="form-control" name="categoria">
+
+@foreach($categorias as $categoria)
+
+<option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+
+
+
+@endforeach
+
+</select>
   <div class="mb-3">
   <label for="image" class="form-label">Imagen</label>
   <input type="file" name='image' id='image' class="form-control" accept=".png, .jpg, .jpeg">
