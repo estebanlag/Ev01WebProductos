@@ -26,7 +26,7 @@ Route::post('/registrarUsuario','App\Http\Controllers\LoginController@register')
 Route::get('/recuperarContraseña','App\Http\Controllers\LoginController@recuperarContraseña');
 Route::get('/contraseñaRecuperada','App\Http\Controllers\LoginController@contraseñaRecuperada');
 Route::post('/logout','App\Http\Controllers\LoginController@logout');
-Route::get('/dashboard','App\Http\Controllers\DashboardController@index');
+Route::get('/dashboard','App\Http\Controllers\DashboardController@index')->name('dashboard');
 Route::get('/mostrarproducto', 'App\Http\Controllers\productos@mostrarproductos');
 
 

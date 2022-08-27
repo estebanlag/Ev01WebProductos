@@ -17,7 +17,11 @@
     @section('footer')
      <hr>
      <p style="text-align:center" >Proyecto Desarrollado por: Braulio Díaz, Esteban Lagos, Sebastian Martinez y Wilmer Rodriguez.</p>
-    <center><a href="/dashboard"><button class='btn btn-success' >Ir a Dashboard</button></a>
+    <center>
+      <p>{{ Route::currentRouteName() }}</p>
+      @if(Route::currentRouteName() != 'dashboard')
+       <a href="/dashboard"><button class='btn btn-success' >Ir a Dashboard</button></a>
+      @endif
     </center> @show
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
