@@ -18,37 +18,31 @@
     <input type="text" class="form-control" id="nombre" name="nombre">
   </div>
   <div class="mb-3">
-  <label for="estado" class="form-label">estado</label>
+  <label for="estado" class="form-label">estado
   <input type="number" name='estado' id='estado' class="form-control">
-
-  </div>
-  Sucursal
-
+  </label>
+  <label for="precio" class="form-label">precio
+  <input type="number" name='precio' id='precio' class="form-control">
+  </label>
+  <label for="cantidad" class="form-label">cantidad
+  <input type="number" name='cantidad' id='cantidad' class="form-control">
+  </label>
+</div>
+Sucursal
 <select class="form-control" name="sucursal">
-
 @foreach($sucursales as $sucursal)
-
 <option value="{{$sucursal->id}}">{{$sucursal->nombre}}</option>
 
-
-
 @endforeach
-
 </select>
-
 Categoría
-
 <select class="form-control" name="categoria">
-
 @foreach($categorias as $categoria)
-
 <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
 
-
-
 @endforeach
-
 </select>
+  
   <div class="mb-3">
   <label for="image" class="form-label">Imagen</label>
   <input type="file" name='image' id='image' class="form-control" accept=".png, .jpg, .jpeg">
@@ -71,3 +65,8 @@ Categoría
 @section('footer')
   @parent
 @stop
+
+
+
+
+/-----------------------------/

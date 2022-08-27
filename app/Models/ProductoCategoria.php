@@ -10,7 +10,7 @@ class ProductoCategoria extends Model
     use HasFactory;
     protected $primaryKey = 'id';
     protected $table = 'ProductoCategoria';
-
+    public $timestamps = false;
     public function categorias(){
         return $this->belongsTo(Categoria::class, 'id_categoria');
     }

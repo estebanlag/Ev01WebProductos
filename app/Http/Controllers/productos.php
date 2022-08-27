@@ -42,6 +42,7 @@ class productos extends Controller
                     'descripcion' => 'required'
                 ]);
 
+                
                 $image = $request->file('image');
 
                 if($image){
@@ -59,10 +60,24 @@ class productos extends Controller
                
                 $producto->save();
 
+                $prodcat= new ProductoCategoria();
+                $prodcat->id_producto=$producto->id;
+                $prodcat->id_categoria=$request->categoria;
+                $prodcat->save();
+
+
+                $prodsucursal = new productosucursal();
+                $prodsucursal->cod_Producto_Sucursal=$producto->id.$request->sucursal;
+                $prodsucursal->producto_id=$producto->id;
+                $prodsucursal->sucursal_id=$request->sucursal;
+                $prodsucursal->cantidad=$request->cantidad;
+                $prodsucursal->precio=$request->precio;
+                $prodsucursal->estado=$request->estado;
+                $prodsucursal->save();
                 $productos = Producto::get();
                 return view('mostrarproductos',[
                     'productos' => $productos]);
-            }  
+            } 
             
             public function update(producto $producto,Request $request){
 
