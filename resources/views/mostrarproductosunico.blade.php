@@ -26,7 +26,12 @@
               <td >{{$productos->nombre}}</td>
               <td>{{$productos->descripcion}}</td>
               <td>{{$productos->estado}}</td>
-              <td><img src="{{asset($productos->image)}}" width="50" height="50" class=""></td>
+              <td>
+              @if(Storage::disk('images')->has($productos->image))
+                <img src="{{ url('miniatura/'. $productos->image) }}" width="50" height="50" class="img-thumbnail" alt="">
+              @else
+                <img src="{{ $productos->image }}" width="50" height="50" class="img-thumbnail">
+              @endif</td>
               
               <td><a href="/producto/destroy/{{$productos->id}}"><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></a></td>
           </tr>
