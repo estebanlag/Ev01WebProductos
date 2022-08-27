@@ -17,7 +17,7 @@ class productos extends Controller
        return view('mostrarproductos',[
             'productos' => $productos]);
 
-        return view('crearsucursal'); 
+        
     }
 
             public function create(){
