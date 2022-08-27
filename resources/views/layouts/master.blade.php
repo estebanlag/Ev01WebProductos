@@ -18,7 +18,7 @@
      <hr>
      <p style="text-align:center" >Proyecto Desarrollado por: Braulio Díaz, Esteban Lagos, Sebastian Martinez y Wilmer Rodriguez.</p>
     <center>
-      <p>{{ Route::currentRouteName() }}</p>
+      
       @if(Route::currentRouteName() != 'dashboard')
        <a href="/dashboard"><button class='btn btn-success' >Ir a Dashboard</button></a>
       @endif
