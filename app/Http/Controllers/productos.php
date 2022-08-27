@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Models\ProductoCategoria;
+use App\Models\ProductoSucursal;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -100,7 +102,9 @@ echo $ruta.$filename;
                             $productosucursal=ProductoSucursal::where('producto_id', $id)->delete();
                             $productoscategoria=ProductoCategoria::where('id_producto', $id)->delete();
                             $productos=Producto::where('id', $id)->delete();
-                            return view('mostrarproductos');
+                            $productos=Producto::get();
+                            return view('mostrarproductos',[
+                                'productos' => $productos]);
                         
                 
                             echo "elimina";

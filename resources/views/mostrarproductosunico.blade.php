@@ -34,7 +34,7 @@
               @endif</td>
               
               <form method="post" action="/producto/{{ $productos -> id}}" > {{ method_field('delete') }}
-              <td><input class="btn btn-danger" type="submit" value='eliminar'/></td>
+              <td><input class="btn btn-danger" type="submit" value='Eliminar'/></td>
               </form>
           </tr>
 
