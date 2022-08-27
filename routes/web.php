@@ -36,6 +36,9 @@ Route::post('/buscar', 'App\Http\Controllers\DashboardController@buscar')->name(
 Route::get('/categoriadelete/{id}', 'App\Http\Controllers\categorias@delete');
 Route::get('/productosucursalupdate/{id}', 'App\Http\Controllers\productosucursalx@updateprecio');
 
+Route::get('/categoriaupdate/{id}', 'App\Http\Controllers\categorias@update');
+Route::post('/categoriaupdated', 'App\Http\Controllers\categorias@updateSave');
+
 
 
 
@@ -47,7 +50,7 @@ Route::resource('/usuario','App\Http\Controllers\usuarios');
 Route::resource('/categoria','App\Http\Controllers\categorias');
 
 Route::resource('/producto','App\Http\Controllers\productos');
-Route::get('/imagen/{filename}','App\Http\Controllers\productos@getImagen');
+Route::get('/miniatura/{filename}','App\Http\Controllers\productos@getImagen');
 
 Route::Post('/mostrarproducto','App\Http\Controllers\productos@store');
 Route::resource('/sucursal','App\Http\Controllers\sucursalx');

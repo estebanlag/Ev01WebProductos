@@ -42,7 +42,17 @@
               <td >{{ $producto->nombre }}</td>
               <td>{{ $producto->descripcion }}</td>
               <td>{{ $producto->estado }}</td>
+
               <td><img src=".images/{{$producto->image}}" width="50" height="50" class="img-thumbnail"></td>
+
+              <td>
+                @if(Storage::disk('images')->has($producto->image))
+                  <img src="{{ url('miniatura/'. $producto->image) }}" width="50" height="50" class="img-thumbnail" alt="">
+                @else
+                  <img src="{{ $producto->image }}" width="50" height="50" class="img-thumbnail">
+                @endif
+              </td>
+
               <td>{{ FormatTime::LongTimeFilterCreated($producto->created_at) }}</td>
               <td>{{ FormatTime::LongTimeFilterUpdated($producto->updated_at) }} </td>
               <td><a class="btn btn-danger" href="/producto/{{ $producto->id }}"> Actualizar</a> </td>
