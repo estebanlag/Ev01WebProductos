@@ -37,7 +37,7 @@
       <td>{{ FormatTime::LongTimeFilterCreated($categoria->created_at) }}</td>
       <td>{{ FormatTime::LongTimeFilterUpdated($categoria->updated_at) }}</td>
       <td>  
-        <a href="#" <button class="btn btn-primary">Actualizar</button></a>
+        <a href="/categoria/{{ $categoria->id }}" <button class="btn btn-primary">Actualizar</button></a>
         <a href="/categoriadelete/{{ $categoria->id }}" <button class="btn btn-danger">Eliminar</button></a>
        </td>
       </tr>

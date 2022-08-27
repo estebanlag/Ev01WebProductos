@@ -53,7 +53,7 @@
       <td>{{ FormatTime::LongTimeFilterCreated($sucursal->created_at) }}</td>
       <td>{{ FormatTime::LongTimeFilterUpdated($sucursal->updated_at) }}</td>
       <td>  
-        <a href="#" <button class="btn btn-primary">Actualizar</button></a>
+        <a href="sucursal/{{ $sucursal->id }}" <button class="btn btn-primary">Actualizar</button></a>
         <a href="#" <button class="btn btn-danger">Eliminar</button></a>
        </td>
       </tr>

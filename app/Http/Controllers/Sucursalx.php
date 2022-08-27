@@ -34,4 +34,29 @@ public function store(Request $request){
 
      return view('dashboard');
 }
+
+
+public function show(Sucursal $sucursal)
+{
+                              
+      return view('mostrarsucursalunica',['sucursal' => $sucursal]);
 }
+
+public function update(Request $request){
+
+   
+    $nuevaSucursal = Sucursal::findOrFail($request->id);
+  
+     $nuevaSucursal->nombre = $request->nombre;
+     $nuevaSucursal->direccion = $request->direccion;
+     $nuevaSucursal->telefono = $request->telefono;
+     $nuevaSucursal->email = $request->email;
+     $nuevaSucursal->save();
+
+     
+     return view('mostrarsucursalunica',['sucursal' => $nuevaSucursal]);
+    }
+
+}
+
+

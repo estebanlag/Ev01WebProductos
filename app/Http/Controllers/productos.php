@@ -44,6 +44,7 @@ class productos extends Controller
 
                 if($image){
                     $image_path = time()."-".$image->getClientOriginalName();
+                    $image_path=str_replace(" ","",$image_path);
                   \Storage::disk('images')->put($image_path, \File::get($image));
                 }
 
@@ -74,7 +75,7 @@ $productos=new Producto();
               $ruta = $ruta.$filename;
 echo $ruta.$filename;
                 }else {
-                    $ruta="no hay ruta";
+                    $upload="no hay ruta";
                 }
                
                             echo $ruta;
@@ -88,7 +89,8 @@ echo $ruta.$filename;
 
                         $productos->save();     
                          echo "update productos";
-                        
+                         return redirect("/productosucursalupdate/$request->id");
+
                          //return view('crearsucursal'); 
                         }    
        

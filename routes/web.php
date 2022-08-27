@@ -34,6 +34,7 @@ Route::get('/crearproducto', 'App\Http\Controllers\productos@formulario');
 Route::post('/buscar', 'App\Http\Controllers\DashboardController@buscar')->name('busqueda');
 
 Route::get('/categoriadelete/{id}', 'App\Http\Controllers\categorias@delete');
+Route::get('/productosucursalupdate/{id}', 'App\Http\Controllers\productosucursalx@updateprecio');
 
 
 

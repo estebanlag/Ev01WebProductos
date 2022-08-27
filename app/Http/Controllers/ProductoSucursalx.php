@@ -31,6 +31,12 @@ class ProductoSucursalx extends Controller
     }
 
 
+    public function updateprecio(Request $request) { 
+      echo $request->id;
+
+
+    }
+
     public function store(Request $request) {
     
       $ProductoSucursal = new ProductoSucursal();

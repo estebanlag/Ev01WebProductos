@@ -53,7 +53,7 @@ $cont++;
     "<td>$valorcategoria->nombre</td>".
     "<td>$valor->Precio</td>".
     "<td>$valorproducto->descripcion</td>".
-    "<td><button class='btn btn-success' style='margin: 5px';>Editar</button>".
+    "<td><a href='/producto/$valor->producto_id'><button class='btn btn-success' style='margin: 5px';>Editar</button></a>".
     "<button class='btn btn-danger' style='margin: 5px';>Eliminar</button>".
     "</td>".
     "</tr>".$td;
