@@ -75,7 +75,7 @@ $productos=new Producto();
               $ruta = $ruta.$filename;
 echo $ruta.$filename;
                 }else {
-                    $upload="no hay ruta";
+                    $ruta="no hay ruta";
                 }
                
                             echo $ruta;
