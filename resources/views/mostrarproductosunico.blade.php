@@ -33,7 +33,9 @@
                 <img src="{{ $productos->image }}" width="50" height="50" class="img-thumbnail">
               @endif</td>
               
-              <td><a href="/producto/destroy/{{$productos->id}}"><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></a></td>
+              <form method="post" action="/producto/{{ $productos -> id}}" > {{ method_field('delete') }}
+              <td><input class="btn btn-danger" type="submit" value='eliminar'/></td>
+              </form>
           </tr>
 
         

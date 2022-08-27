@@ -95,13 +95,19 @@ echo $ruta.$filename;
                         }    
        
                             
-        public function destroy(producto $producto)
-        {
-            echo "elimina";
-            //if($producto->delete()){
-            //    return true;
-            //}
-        }
+                        public function destroy($id)
+                        {
+                            $productosucursal=ProductoSucursal::where('producto_id', $id)->delete();
+                            $productoscategoria=ProductoCategoria::where('id_producto', $id)->delete();
+                            $productos=Producto::where('id', $id)->delete();
+                            return view('mostrarproductos');
+                        
+                
+                            echo "elimina";
+                            //if($producto->delete()){
+                            //    return true;
+                            //}
+                        }
                                     
         public function edit(){
             $productos = Producto::get();
